@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/loading2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vender/megnefic/dist/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vender/owl-carousel/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vender/owl-carousel/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/show.css' %}">
+    <link rel = "icon" href = "{% static 'img/services/p1.png' %}"  type = "image/x-icon">
+    {% block style %}{% endblock style %}
+    <title>Clip3D</title>
+</head>
+<body class="bg-dark">
+
+<div class="aloading">
+    <div class="loading2"></div>
+</div>
+  <!--================================== header ========================= -->
+  <header id="header">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navmain">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" style="border: 3px solid transparent;background-clip: padding-box;outline: none !important; -webkit-tap-highlight-color: transparent;" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-menu-button-wide-fill" viewBox="0 0 16 16">
+            <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v2A1.5 1.5 0 0 0 1.5 5h13A1.5 1.5 0 0 0 16 3.5v-2A1.5 1.5 0 0 0 14.5 0h-13zm1 2h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1zm9.927.427A.25.25 0 0 1 12.604 2h.792a.25.25 0 0 1 .177.427l-.396.396a.25.25 0 0 1-.354 0l-.396-.396zM0 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V8zm1 3v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2H1zm14-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2h14zM2 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+          </svg></i></span>
+        </button>
+        <div class="navdiv container-fluid">
+        <div class="collapse navbar-collapse container" id="navbarSupportedContent" style="height:6rem;" >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-capitalize ullol text-center">
+            <li class="nav-item activate" data-filter="*">
+              <a class="nav-link a" aria-current="page" href="#">All</a>
+            </li>
+            {% for i in catagory %}
+            <li class="nav-item"  data-filter=".{{i.Cat}}">
+              <a class="nav-link" href="#">{{i.Cat}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+  <!--================================== header ========================= -->
+  <main class="bg-dark text-white">
+    <div class="container">
+      <div class="row portfolio-item mx-4">
+
+      {% for i in uploadPortfolio %}
+      <div class="item {{i.catagory}} col-lg-3 col-md-4 col-sm-12 " style="height: 187px;">
+          <a href="/prod/{{i.id}}" class="text-white">
+          <img src="{{i.thumbnail.url}}" alt="" style="object-fit: cover; ">
+          <div class="info text-center py-5 text-uppercase ">
+            <h4>{{i.title|slice:":12"}}..</h4>
+            <div class="line"></div>
+            <h5>{{i.catagory}}</h5>
+          </div>
+        </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="{% static 'js/jquery-3,6.0.min.js' %}"></script>
+    <script src="{% static 'js/lol.js' %}"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+    <script src="{% static 'vender/isotope/isotope.js' %}"></script>
+    <script src="{% static 'vender/megnefic/dist/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'vender/megnefic/dist/jquery.magnific-popup.js' %}"></script>
+    <script src="{% static 'vender/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script type="module" src="{% static 'js/modelviewer.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/show.js' %}"></script>
+
+<script>
+  setTimeout(function(){
+    $('.aloading').fadeToggle();
+},1000)
+
+
+</script>
+
+</body>
+</html>

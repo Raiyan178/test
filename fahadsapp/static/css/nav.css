@@ -1,0 +1,57 @@
+@import url(../fonts/fonts.css);
+@import url(./partials/_var.css);
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url(./partials/title.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+    display: block;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media only screen and (min-width: 991px) {
+    header nav .ullol{
+        font-size: 1.3rem;
+        font-family: var(--roboto);
+        font-weight: 500;
+        display: grid;
+        grid-template-columns: 1rem 1rem 1rem 1rem;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .navmain{
+        height: 8rem;
+        width: 100%;
+        position:sticky;
+
+    }
+    .activate{
+        text-decoration: underline solid #96969a;
+        text-decoration-thickness: .2rem;
+    }
+
+}
+@media only screen and (max-width: 991px) {
+    header nav .ullol{
+        font-size: 1.2rem;
+        font-family: var(--roboto);
+        font-weight: 500;
+        
+    }
+    header nav .navdiv{
+        width: 100%;
+        position: absolute;
+        background-color: #17171F;
+        z-index: 1;
+        top: 3rem;
+    }
+    .activate{
+        text-decoration: underline overline solid #96969a;
+        text-decoration-thickness: .1rem;
+
+    }
+}

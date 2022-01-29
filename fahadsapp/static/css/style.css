@@ -1,0 +1,406 @@
+@import url(../fonts/fonts.css);
+@import url(./partials/_var.css);
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+    display: block;
+    scroll-behavior: smooth;
+}
+/* start nav  */
+
+.header_area .main-menu .navbar{
+    padding: 1rem 6rem;
+}
+.header_area .main-menu .nav-item .nav-link{
+    font-family: var(--poppins);
+    text-transform: uppercase;
+    font-weight: 550;
+    padding: 1.7rem;
+    color: var(--title-color);
+}
+.header_area .main-menu .navbar-nav .active a{
+    background:var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.header_area .main-menu .navbar-nav a:hover{
+    background:var(--gradient-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.header_area .main-menu .navbar .container-fluid .navbar-brand{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--title-color);
+}
+.navbar_fixed{
+    position: fixed;
+    width: 100%;
+    top: -1px;
+    left: 0;right: 0;
+    background: #17171F;
+    box-shadow: var(--box-shadow);
+    z-index: 999;
+    transition: background 1s ease;
+}
+/* end nav  */
+
+
+
+
+
+/* banner  */
+/* 3d */
+model-viewer{
+    width: 50rem;
+    height: 50rem;
+    margin: 0 auto;
+
+}
+model-viewer#interaction {
+    --poster-color: transparent;
+}
+
+
+/* 3d */
+
+
+.site-main .site-banner .site-title{
+    padding-top: 10rem;
+    padding-left: 6rem;
+}
+
+.site-main .site-banner .site-title h1{
+    font-size: 3rem;
+}
+.site-main .site-banner .site-title h4{
+    font-size: 2.4rem;
+}
+
+.button{
+    padding: .8rem 2.2rem;
+    font: normal 500 1rem/1.2rem "Roboto"sans-serif;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+}
+.button.primary-button{
+    background: #3F3FFF;
+    background-clip: padding-box;
+    color: whitesmoke;
+    transition: background .6s ease;
+    box-shadow: var(--box-color);
+    font-weight: bold;
+}
+.button.button.primary-button:hover{
+    background-clip: padding-box;
+    background: var(--gradient-color);
+    color: whitesmoke;
+    -webkit-box-shadow: 3px 28px 30px 1px rgba(0,0,0,0.38); 
+    box-shadow: 3px 28px 30px 1px rgba(0,0,0,0.38);
+}
+.title-text{
+    font:normal bold 3rem/5rem "Roboto"sans-serif;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+
+/* banner  */
+
+
+
+
+/* about */
+
+.site-main .about-area{
+    padding: 8rem 5rem;
+}
+.site-main .about-area .about-title h2 > span{
+    display: block;
+    font:normal bold 3rem/4rem var(--poppins);
+    letter-spacing: 21px;
+}
+p.para{
+    color: var(--title-color2);
+    font: normal 500 16px/25px var(--poppins);
+}
+
+/* about */
+
+
+/* services */
+
+.site-main .services-area{
+    padding: 7rem 2rem;
+}
+.site-main .services-area .services-title{
+    padding: 0 14rem;
+}
+.site-main .services-area .services-title h1{
+    font-size: 2rem;
+}
+.site-main > .services-area .services{
+    background: #2e2e3b;
+    padding: 2rem 0;
+    width: 16rem;
+    margin: 5rem .5rem;
+    transition: box-shadow .7s ease;
+}
+.site-main >.services-area .services:hover{
+    box-shadow: var(--shadow-color);
+}
+p.text-no{
+    color: var(--title-color2);
+    opacity: .6;
+}
+.site-main .services-area img{
+    width: 3rem;
+    height: 3rem;
+}
+
+/* services */
+
+/* project */
+
+.site-main .project-area{
+    padding: 4rem 0;
+}
+.site-main .project-area .button-group button{
+    background: transparent;
+    border: none;
+    font: normal 500 1rem/9rem var(--poppins);
+    color: var(--title-color);
+    text-transform: uppercase;
+}
+.site-main .project-area .button-group button+button{
+    padding-left: 3rem;
+}
+.site-main .project-area .grid .our-project > .title h4{
+    font: normal 700 1.7rem/.8rem var(--poppins);
+}
+
+
+button:focus,
+button:active,
+button:hover,
+.btn:active,
+.btn.active{
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+
+.title-h1{
+    font-weight: bold;
+}
+
+/* new */
+/* SIBLING FADE: fade out siblings around a hovered item */
+
+.sibling-fade { visibility: hidden; }
+/* Prevents :hover from triggering in the gaps between items */
+
+.sibling-fade > * { visibility: visible; }
+/* Brings the child items back in, even though the parent is `hidden` */
+
+.sibling-fade > * { transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms; }
+/* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
+
+.sibling-fade:hover > * { opacity: 0.7; transform: scale(0.9); }
+/* Fade out all items when the parent is hovered */
+
+.sibling-fade > *:hover { opacity: 1; transform: scale(1); transition-delay: 0ms, 0ms; }
+/* Fade in the currently hovered item */
+
+
+
+
+
+
+
+/* Presentational Styles */
+
+
+.sibling-fade {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sibling-fade > * {
+  background: transparent;
+  padding: .5em;
+  flex: auto;
+  margin: 0.3em;
+  text-align: center;
+  color: wheat;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+
+/* new */
+
+/* project */
+
+/* client */
+
+.site-main .about-area .about-title p{
+    padding: 1rem 7rem;
+}
+.site-main .about-area .client{
+    background: #17171F;
+    box-shadow: var(--box-shadow);
+    margin: 3rem 0rem;
+}
+.site-main .about-area .client .client-img{
+    padding: 2rem;
+}
+
+.site-main .about-area .client .about-client{
+    padding-top: 2rem;
+}
+.site-main .about-area .client .about-client h4{
+    font: normal 500 21px/ 20px var(--poppins);
+}
+.site-main .about-area .client .about-client p{
+    font-size: 1rem;
+}
+.site-main .about-area .owl-carousel .owl-item{
+    display: flex;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+.site-main .about-area .owl-carousel .owl-dots .owl-dot.active span{
+    background-color: var(--primary-color);
+    width: .7rem;
+    height: .7rem;
+}
+.site-main .about-area .client .about-client p{
+    color:#8e919a;
+}
+
+/* client */
+
+/* progress */
+.site-main .about-area .nogod{
+    border: 1px solid #3f3f51;
+    height: 23rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+/* progress */
+
+
+
+/* contact socio */
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+footer{
+    display: grid;
+    place-items: center;
+}
+.wrapper {
+    display: inline-flex;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background-color: #3f3f51;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #3f3f51;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #3f3f51;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+  }
+  
+
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+  }
+  
+  .wrapper .github:hover,
+  .wrapper .github:hover .tooltip,
+  .wrapper .github:hover .tooltip::before {
+    background-color: #0077b5;
+    color: #ffffff;
+  }
+  
+
+  
+/* contact */
+
+/* contact input  */
+
+
+/* contact input  */
