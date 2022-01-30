@@ -234,7 +234,7 @@
             
             <!-- Product -->
             <div class="item {{i.catagory}} col-lg-3 col-md-6 col-sm-12 my-3 mx-3" style="width: 300px; height: 200px; float: left;">
-              <img src="{{i.thumbnail.url}}" alt="" style="width: 300px; height: 200px; box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); border-radius: 5px;">
+              <a class="test-popup-link" href="{{i.thumbnail.url}}"><img src="{{i.thumbnail.url}}" alt="" style="width: 300px; height: 200px; box-shadow: 0 20px 30px rgba(0, 0, 0, 0.8); border-radius: 5px;"></a>
             </div>
             <!-- Product -->
              
@@ -363,16 +363,26 @@
 
 
     
+    <script src="{% static 'js/jquery-3,6.0.min.js' %}"></script>
     <script src="{% static 'js/lol.js' %}"></script>
-    <script src="{% static 'vender/megnefic/dist/jquery.magnific-popup.min.js' %}"></script>
-    <script src="{% static 'vender/megnefic/dist/jquery.magnific-popup.js' %}"></script>
-    <script src="{% static 'vender/owl-carousel/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+    <script src="{% static 'vender/isotope/isotope.js' %}"></script>
+    <script src="{% static 'vender/megnefic/dist/jquery.magnific-popup.min.js' >
+    <script src="{% static 'vender/megnefic/dist/jquery.magnific-popup.js' %}">>
+    <script src="{% static 'vender/owl-carousel/js/owl.carousel.min.js' %}"></s>
+    <script type="module" src="{% static 'js/modelviewer.js' %}"></script>
     <script src="{% static 'js/active.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-    <script src="{% static 'js/jquery-3,6.0.min.js' %}"></script>
-    <script src="{% static 'js/loading.js' %}"></script>
-    <script type="module" src="{% static 'js/modelviewer.js' %}"></script>
-    <script src="{% static 'vender/isotope/isotope.js' %}"></script>
+
+    <script>
+      $('.project-area .button-group #btn1').trigger("click")
+
+    $('.project-area .grid .test-popup-link').magnificPopup({
+        type: 'image',
+        gallery:{enabled:true}
+      });
+    </script>
+
 
 
     
