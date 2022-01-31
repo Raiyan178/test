@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-#drug^$gd+doo@4j^w^x)^p7biti4t1^1cwlnfdl#=n+*f)e)n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['clip3d.ml','www.clip3d.ml']
 
 
 # Application definition
